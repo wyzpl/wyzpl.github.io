@@ -1,0 +1,17 @@
+[
+  {
+    "text": "博客首页",
+    "link": "/guide/",
+    "activeMatch": "/guide/"
+  },
+  {
+    "text": "前端笔记",
+    "link": "/web/",
+    "activeMatch": "/web/"
+  },
+  {
+    "text": "工具集合",
+    "link": "/tools/",
+    "activeMatch": "/tools/"
+  }
+]

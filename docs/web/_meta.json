@@ -1,0 +1,10 @@
+[
+  "index",
+  {
+    "type": "dir",
+    "name": "vue",
+    "label": "Vue 相关",
+    "collapsible": true,
+    "collapsed": false
+  }
+]
