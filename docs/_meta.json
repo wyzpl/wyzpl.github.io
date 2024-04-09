@@ -5,6 +5,11 @@
     "activeMatch": "/guide/"
   },
   {
+    "text": "每日一问",
+    "link": "/day/",
+    "activeMatch": "/day/"
+  },
+  {
     "text": "前端笔记",
     "link": "/web/",
     "activeMatch": "/web/"
