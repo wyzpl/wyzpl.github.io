@@ -5,7 +5,7 @@
     "activeMatch": "/guide/"
   },
   {
-    "text": "每日一问",
+    "text": "开发实践",
     "link": "/day/",
     "activeMatch": "/day/"
   },
@@ -13,6 +13,11 @@
     "text": "前端笔记",
     "link": "/web/",
     "activeMatch": "/web/"
+  },
+  {
+    "text": "后端笔记",
+    "link": "/dev/",
+    "activeMatch": "/dev/"
   },
   {
     "text": "工具集合",
