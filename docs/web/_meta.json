@@ -3,28 +3,21 @@
   {
     "type": "dir",
     "name": "vue",
-    "label": "Vue 相关",
+    "label": "Vue",
     "collapsible": true,
     "collapsed": false
   },
   {
     "type": "dir",
     "name": "uniapp",
-    "label": "Uniapp 相关",
+    "label": "Uniapp",
     "collapsible": true,
     "collapsed": false
   },
   {
     "type": "dir",
     "name": "react",
-    "label": "React 相关",
-    "collapsible": true,
-    "collapsed": false
-  },
-  {
-    "type": "dir",
-    "name": "nest",
-    "label": "Nest.js 学习",
+    "label": "React",
     "collapsible": true,
     "collapsed": false
   }
