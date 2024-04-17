@@ -7,6 +7,9 @@ export default defineConfig({
   base: "/blog/",
   description: "Tree Planting Development",
   icon: "/rspress-icon.png",
+  route: {
+    cleanUrls: true,
+  },
   logo: {
     light: "/rspress-light-logo.png",
     dark: "/rspress-dark-logo.png",
