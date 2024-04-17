@@ -28,7 +28,7 @@ npm install
 npm run start
 ```
 
-在浏览器中打开  **`[http://localhost:3000/](http://localhost:3000/)`**
+在浏览器中打开  **[http://localhost:3000/](http://localhost:3000/)**
 
 ## 常用命令
 

@@ -1,1 +1,10 @@
-["index"]
+[
+  "1",
+  {
+    "type": "dir",
+    "name": "os",
+    "label": "系统工具",
+    "collapsible": true,
+    "collapsed": false
+  }
+]
