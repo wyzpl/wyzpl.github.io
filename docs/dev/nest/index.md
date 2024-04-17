@@ -1,34 +1,34 @@
-# 笔记简介
+# 快速开始
 
-本文主要记录的是 **NestJS** 一些基础知识学习的相关笔记
+# **安装**
 
-主要学习内容是参考官方文档和网络视频资源
+## **前提**
 
-内容比较基础、零碎，记录下来方便后续快速回顾，加深印象
+Node.js（版本 >= 16）
 
-## NestJS 文档
+## **脚手架**
 
-**官方文档：[https://docs.nestjs.com/](https://docs.nestjs.com/)**
+```bash
+npm i -g @nestjs/cli
+```
 
-**中文文档：[http://nestjs.inode.club/](http://nestjs.inode.club/)**
+## **创建项目**
 
-## 开发工具
+使用  `Nest CLI`  构建的项目会创建一个初始的项目结构,并安装 node modules 和其他一些样板文件，然后创建一个  `src/`  目录，并增加几个核心文件。
 
-IntelliJ IDEA 或者 WebStorm
+```bash
+nest new project-name
+```
 
-**优点：**
+## 启动项目
 
-- 开箱即用、无需配置
-- 代码提示支持好
+```bash
+cd project
+npm install
+npm run start
+```
 
-**缺点：**
+在浏览器中打开  **`[http://localhost:3000/](http://localhost:3000/)`**
 
-- 付费
+## 常用命令
 
-## 数据库
-
-MySQL + Navicat
-
-## API 测试工具
-
-**Apifox** 中文界面，使用简单，支持快速 **Mock**，相比 **Postman** 更容易上手

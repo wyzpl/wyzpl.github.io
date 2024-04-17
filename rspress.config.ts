@@ -3,9 +3,9 @@ import { defineConfig } from "rspress/config";
 
 export default defineConfig({
   root: path.join(__dirname, "docs"),
-  title: "开发个锤子",
+  title: "大家别卷了",
   base: "/blog/",
-  description: "Rspack-based Static Site Generator",
+  description: "Tree Planting Development",
   icon: "/rspress-icon.png",
   logo: {
     light: "/rspress-light-logo.png",
