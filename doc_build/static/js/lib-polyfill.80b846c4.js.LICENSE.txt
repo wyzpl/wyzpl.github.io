@@ -32,6 +32,8 @@
 
 /*! ../internals/call-with-safe-iteration-closing */
 
+/*! ./arrayLikeToArray.js */
+
 /*! ../internals/function-call */
 
 /*! ../internals/descriptors */
@@ -78,6 +80,8 @@
 
 /*! ../internals/is-callable */
 
+/*! ./typeof.js */
+
 /*! ../internals/a-callable */
 
 /*! ../internals/array-includes */
@@ -93,6 +97,8 @@
 /*! ../internals/async-iterator-close */
 
 /*! ../internals/object-create */
+
+/*! ./objectWithoutPropertiesLoose.js */
 
 /*! ../internals/descriptors */
 
@@ -117,6 +123,8 @@
 /*! ../internals/classof-raw */
 
 /*! ../internals/define-built-in */
+
+/*! ./toPrimitive.js */
 
 /*! ../internals/create-iter-result-object */
 
@@ -190,9 +198,9 @@
 
 /*! ../internals/is-pure */
 
-/*! ../internals/is-callable */
-
 /*! ../internals/get-iterator-direct */
+
+/*! ../internals/is-callable */
 
 /*! ../internals/an-object */
 
@@ -213,6 +221,8 @@
 /*! ../internals/function-uncurry-this */
 
 /*! ../internals/async-iterator-close */
+
+/*! ./arrayWithoutHoles.js */
 
 /*! ../internals/ie8-dom-define */
 
@@ -239,6 +249,8 @@
 /*! ../internals/an-object */
 
 /*! ../internals/well-known-symbol */
+
+/*! ./typeof.js */
 
 /*! ../internals/define-built-in */
 
@@ -378,6 +390,8 @@
 
 /*! ../internals/array-includes */
 
+/*! ./iterableToArray.js */
+
 /*! ../internals/well-known-symbol */
 
 /*! ../internals/function-uncurry-this */
@@ -480,6 +494,8 @@
 
 /*! ../internals/is-callable */
 
+/*! ./toPropertyKey.js */
+
 /*! ../internals/fails */
 
 /*! ../internals/classof */
@@ -526,11 +542,15 @@
 
 /*! ../internals/engine-v8-version */
 
+/*! ./nonIterableSpread.js */
+
 /*! ../internals/object-get-prototype-of */
 
 /*! ../internals/to-indexed-object */
 
 /*! ../internals/define-built-in-accessor */
+
+/*! ./arrayLikeToArray.js */
 
 /*! ../internals/is-null-or-undefined */
 
@@ -657,3 +677,5 @@
 /*! ../internals/is-symbol */
 
 /*! ../internals/is-pure */
+
+/*! ./unsupportedIterableToArray.js */

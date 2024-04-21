@@ -3,15 +3,15 @@ pageType: home
 
 hero:
   name: 大家别卷了
-  text: Web前端开发笔记
+  text: 开发笔记
   tagline: 记录开发过程中遇到的问题及解决方案
   actions:
     - theme: brand
-      text: 介绍
-      link: /guide/
+      text: 开发笔记
+      link: /note/0
     - theme: alt
-      text: 快速开始
-      link: https://github.com/web-infra-dev/rspress
+      text: 工具集合
+      link: /tools/
   image:
     src: /rspress-icon.png
     alt: Rspress Logo

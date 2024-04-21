@@ -1,13 +1,8 @@
 [
   {
-    "text": "博客首页",
-    "link": "/guide/",
-    "activeMatch": "/guide/"
-  },
-  {
-    "text": "开发实践",
-    "link": "/day/",
-    "activeMatch": "/day/"
+    "text": "开发笔记",
+    "link": "/note/0",
+    "activeMatch": "/note/"
   },
   {
     "text": "前端笔记",

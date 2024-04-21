@@ -3,13 +3,17 @@ import { defineConfig } from "rspress/config";
 
 export default defineConfig({
   root: path.join(__dirname, "docs"),
-  title: "开发个锤子",
+  title: "JSZhiShu",
   base: "/blog/",
-  description: "Rspack-based Static Site Generator",
-  icon: "/rspress-icon.png",
-  logo: {
-    light: "/rspress-light-logo.png",
-    dark: "/rspress-dark-logo.png",
+  description: "朝如青丝暮成雪 人生得意须尽欢",
+  logoText:'JSZhiShu',
+  // icon: "/rspress-icon.png",
+  // logo: {
+  //   light: "/rspress-light-logo.png",
+  //   dark: "/rspress-dark-logo.png",
+  // },
+  route:{
+    cleanUrls:true
   },
   themeConfig: {
     socialLinks: [
