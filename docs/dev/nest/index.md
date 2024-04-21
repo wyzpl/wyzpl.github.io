@@ -1,4 +1,4 @@
-# 项目起步
+# 快速开始
 
 # 安装
 
@@ -8,11 +8,9 @@ Node.js（版本 >= 16）
 
 ## 脚手架
 
-import { PackageManagerTabs } from "@theme";
-
-function App() {
-return <PackageManagerTabs command="install -g @nestjs/cli" />;
-}
+```bash
+npm i -g @nestjs/cli
+```
 
 ## 创建项目
 
@@ -21,3 +19,15 @@ return <PackageManagerTabs command="install -g @nestjs/cli" />;
 ```bash
 nest new project-name
 ```
+
+## 启动项目
+
+```bash
+cd project
+npm install
+npm run start
+```
+
+在浏览器中打开  **[http://localhost:3000/](http://localhost:3000/)**
+
+## 常用命令
