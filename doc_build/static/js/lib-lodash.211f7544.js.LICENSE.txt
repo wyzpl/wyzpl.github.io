@@ -46,15 +46,17 @@
 
 /*! ./isObjectLike.js */
 
+/*! ./isObjectLike.js */
+
 /*! ./_isStrictComparable.js */
 
 /*! ./_baseIteratee.js */
 
 /*! ./_coreJsData.js */
 
-/*! ./isObjectLike.js */
-
 /*! ./_baseMatches.js */
+
+/*! ./_baseProperty.js */
 
 /*! ./_baseTrim.js */
 
@@ -65,8 +67,6 @@
 /*! ./_listCacheDelete.js */
 
 /*! ./_baseAggregator.js */
-
-/*! ./_baseProperty.js */
 
 /*! ./_baseMatchesProperty.js */
 
@@ -252,9 +252,9 @@
 
 /*! ./isArrayLike.js */
 
-/*! ./_baseGetTag.js */
-
 /*! ./debounce.js */
+
+/*! ./_baseGetTag.js */
 
 /*! ./_stackHas.js */
 
