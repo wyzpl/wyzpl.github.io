@@ -13,8 +13,8 @@ hero:
       text: 工具集合
       link: /tools/
   image:
-    src: /rspress-icon.png
-    alt: Rspress Logo
+    src: /logo.png
+    alt: Tree Planting Logo
 features:
   - title: Blazing fast build speed
     details: The core compilation module is based on the Rust front-end toolchain, providing a more ultimate development experience.

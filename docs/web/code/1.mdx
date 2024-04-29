@@ -1,4 +1,4 @@
-# 浏览器控制台 Consloe.log()的高级样式
+# 浏览器控制台 Consloe.log 的高级样式
 
 要为浏览器控制台的 console.log 输出样式化，可以使用 CSS 样式或者使用特殊的命令行工具。
 
@@ -14,7 +14,7 @@ console.log("%cHello World!", "color: blue; font-size: 20px; background-color: y
 
 ### 使用特殊的命令行工具
 
-有一些第三方的工具可以帮助我们在控制台中添加更高级的样式化效果，如 chalk.js 和 ansi-colors 等。这些工具提供了更多的颜色和样式选项，使得控制台输出更加丰富。以下是一个使用 chalk.js 的示例代码：
+有一些第三方的工具可以帮助我们在控制台中添加更高级的样式化效果，如 (chalk.js)[https://github.com/chalk/chalk] 和 (ansi-colors)[https://github.com/doowb/ansi-colors] 等。这些工具提供了更多的颜色和样式选项，使得控制台输出更加丰富。以下是一个使用 chalk.js 的示例代码：
 
 ```js
 const chalk = require("chalk");
@@ -26,3 +26,7 @@ console.log(chalk.blue("Hello World!"));
 **注意：在浏览器环境中使用这些命令行工具需要使用构建工具将代码打包后再在浏览器中运行。**
 
 通过上述方法，你可以为浏览器控制台的 console.log 输出添加高级的样式化效果。
+
+### 效果预览
+
+![](E:\blog\docs\public\tools\0-1.png)

@@ -9,10 +9,10 @@ export default defineConfig({
   description: "朝如青丝暮成雪 人生得意须尽欢",
   logoText: "JSZhiShu",
   // icon: "/rspress-icon.png",
-  // logo: {
-  //   light: "/rspress-light-logo.png",
-  //   dark: "/rspress-dark-logo.png",
-  // },
+  logo: {
+    light: "/logo.png",
+    dark: "/logo.png",
+  },
   plugins: [alignImage()],
   route: {
     cleanUrls: true,

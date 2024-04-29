@@ -6,5 +6,12 @@
     "label": "NestJS",
     "collapsible": true,
     "collapsed": false
+  },
+  {
+    "type": "dir",
+    "name": "next",
+    "label": "NextJS",
+    "collapsible": true,
+    "collapsed": false
   }
 ]
