@@ -1,43 +1,40 @@
-# Git 回退代码的几种方法
+# APP 增加权限获取说明
 
-## 取消当前commit内容
+## 背景
+
+APP 上架华为应用商店需要说明获取权限的说明，否则上架失败。
+
+技术栈：UniApp Vue3 Vite
+
+## 资料
+
+安卓权限标识：https://developer.android.com/reference/android/Manifest.permission (需要翻墙)
+
+### 插件
+
+> 插件中使用了`plus`，如果是多端项目需要进行条件判断
+
+[App 权限判断和提示](https://ext.dcloud.net.cn/plugin?id=594)：当前使用方案
+
+[uni-registerRequestPermissionTips](https://ext.dcloud.net.cn/plugin?id=16960)：以上面方案为基础进行的二开插件，与获取权限操作同步展示，但是获取摄像头权限不能正常使用，看后续会不会修复
+
+[权限申请说明](https://ext.dcloud.net.cn/plugin?id=15897)：通过对 UniApp API 的拦截,提前展示要获取的权限说明。 不用改动代码
+
+## 踩坑
+
+:::tip 权限标识
+调用摄像头的权限：`android.permission.CAMERA`
+
+调用相册的权限：`android.permission.READ_MEDIA_IMAGES`
+
+:::
+
+在项目中使用`uni.chooseImage()`去获取相机、相册权限。获取相机权限正常，获取相册权限一直显示权限是永久关闭状态，手动去启用也无法正常使用。
+
+在网上查找到的资料使用的权限都是`android.permission.READ_EXTERNAL_STORAGE`
 
 :::danger
-
-注意：使用此命令，会丢失commit的最新代码，谨慎使用。
-
+但是`READ_EXTERNAL_STORAGE`在安卓 11(从 API 33 开始，此权限无效) 中已经失效了，需要使用`READ_MEDIA_IMAGES`、 `READ_MEDIA_VIDEO`、 `READ_MEDIA_AUDIO`
 :::
 
-```bash
-git reset --hard HEAD^
-```
-
-## 撤销指定提交记录
-
-这种方式比使用 git reset 命令更加安全，因为它不会改变提交历史，而是创建一个新的提交来撤销之前的修改。
-
-````bash
-git revert <commit>
-git commit -m '回退到版本 commit'
-git push origin <branch> 
-````
-
-## 回退指定commit 并删除提交记录
-
-步骤：
-
-1. 回退到指定commit提交记录
-2. 强制推送代码，会删除指定commit后面的提交记录
-
-```bash
-git reset --hard <commit>
-# 使用强制推送，避免拉取代码
-git push origin <branch> --force
-```
-
-:::warning
-
-` git checkout <commit>`也可以进行代码回退，尚未亲自实践，如有兴趣请自行查找资料
-
-:::
-
+最后，改成`android.permission.READ_MEDIA_IMAGES`可以正常获取权限，获取相册的内容。

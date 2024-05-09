@@ -1,0 +1,42 @@
+# Git 回退代码的几种方法
+
+## 取消当前 commit 内容
+
+:::danger
+
+注意：使用此命令，会丢失 commit 的最新代码，谨慎使用。
+
+:::
+
+```bash
+git reset --hard HEAD^
+```
+
+## 撤销指定提交记录
+
+这种方式比使用 git reset 命令更加安全，因为它不会改变提交历史，而是创建一个新的提交来撤销之前的修改。
+
+```bash
+git revert <commit>
+git commit -m '回退到版本 commit'
+git push origin <branch>
+```
+
+## 回退指定 commit 并删除提交记录
+
+步骤：
+
+1. 回退到指定 commit 提交记录
+2. 强制推送代码，会删除指定 commit 后面的提交记录
+
+```bash
+git reset --hard <commit>
+# 使用强制推送，避免拉取代码
+git push origin <branch> --force
+```
+
+:::warning
+
+` git checkout <commit>`也可以进行代码回退，尚未亲自实践，如有兴趣请自行查找资料
+
+:::
