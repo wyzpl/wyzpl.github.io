@@ -12,6 +12,6 @@
     "rspress-plugin-align-image": "^0.3.0"
   },
   "devDependencies": {
-    "@types/node": "^16"
+    "@types/node": "^20"
   }
 }
