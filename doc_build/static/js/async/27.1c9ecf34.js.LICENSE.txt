@@ -1,5 +1,0 @@
-/*! react/jsx-runtime */
-
-/*! ../public/tools/0-0.png */
-
-/*! @mdx-js/react */
