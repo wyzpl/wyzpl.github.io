@@ -1,0 +1,23 @@
+# Windows11 修改右键菜单
+
+## 方法一
+
+先按住`shift`键再右键点击桌面
+
+## 方法二
+
+通过 CMD 命令切换，使用管理员身份运行 CMD
+
+```bash
+reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
+```
+
+重启电脑就可以看到效果
+
+或者
+
+直接在 CMD 里输入重启菜单命令
+
+```bash
+taskkill /f /im explorer.exe & start explorer.exe
+```

@@ -1,0 +1,16 @@
+[
+  {
+    "type": "dir",
+    "name": "eg",
+    "label": "代码示例",
+    "collapsible": true,
+    "collapsed": false
+  },
+  {
+    "type": "dir",
+    "name": "bug",
+    "label": "踩坑记录",
+    "collapsible": true,
+    "collapsed": false
+  }
+]

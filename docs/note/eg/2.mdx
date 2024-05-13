@@ -10,16 +10,6 @@ APP 上架华为应用商店需要说明获取权限的说明，否则上架失�
 
 安卓权限标识：https://developer.android.com/reference/android/Manifest.permission (需要翻墙)
 
-### 插件
-
-> 插件中使用了`plus`，如果是多端项目需要进行条件判断
-
-[App 权限判断和提示](https://ext.dcloud.net.cn/plugin?id=594)：当前使用方案
-
-[uni-registerRequestPermissionTips](https://ext.dcloud.net.cn/plugin?id=16960)：以上面方案为基础进行的二开插件，与获取权限操作同步展示，但是获取摄像头权限不能正常使用，看后续会不会修复
-
-[权限申请说明](https://ext.dcloud.net.cn/plugin?id=15897)：通过对 UniApp API 的拦截,提前展示要获取的权限说明。 不用改动代码
-
 ## 踩坑
 
 :::tip 权限标识
@@ -38,3 +28,17 @@ APP 上架华为应用商店需要说明获取权限的说明，否则上架失�
 :::
 
 最后，改成`android.permission.READ_MEDIA_IMAGES`可以正常获取权限，获取相册的内容。
+
+## 解决方案
+
+> 插件中使用了`plus`，如果是多端项目需要进行条件判断
+
+使用插件：[App 权限判断和提示](https://ext.dcloud.net.cn/plugin?id=594)
+
+代码
+
+## 其他方案
+
+[uni-registerRequestPermissionTips](https://ext.dcloud.net.cn/plugin?id=16960)：以上面方案为基础进行的二开插件，与获取权限操作同步展示，但是获取摄像头权限不能正常使用，看后续会不会修复
+
+[权限申请说明](https://ext.dcloud.net.cn/plugin?id=15897)：通过对 UniApp API 的拦截,提前展示要获取的权限说明。 不用改动代码
