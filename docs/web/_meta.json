@@ -2,8 +2,22 @@
   "index",
   {
     "type": "dir",
-    "name": "code",
-    "label": "代码示例",
+    "name": "vue",
+    "label": "Vue",
+    "collapsible": true,
+    "collapsed": false
+  },
+  {
+    "type": "dir",
+    "name": "react",
+    "label": "React",
+    "collapsible": true,
+    "collapsed": false
+  },
+  {
+    "type": "dir",
+    "name": "css",
+    "label": "CSS",
     "collapsible": true,
     "collapsed": false
   }

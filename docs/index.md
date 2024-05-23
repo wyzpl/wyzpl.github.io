@@ -8,10 +8,10 @@ hero:
   actions:
     - theme: brand
       text: 开发笔记
-      link: /note/0
+      link: /note/eg/0
     - theme: alt
-      text: 工具集合
-      link: /tools/
+      text: 工具箱
+      link: /tools/0
   image:
     src: /logo.png
     alt: Tree Planting Logo

@@ -1,6 +1,6 @@
 # Git 回退代码的几种方法
 
-## 取消当前 commit 内容
+### 取消当前 commit 内容
 
 ```bash
 git reset --hard HEAD^
@@ -12,7 +12,7 @@ git reset --hard HEAD^
 
 :::
 
-## 撤销指定提交记录
+### 撤销指定提交记录
 
 这种方式比使用 git reset 命令更加安全，因为它不会改变提交历史，而是创建一个新的提交来撤销之前的修改。
 
@@ -22,7 +22,7 @@ git commit -m '回退到版本 commit'
 git push origin <branch>
 ```
 
-## 回退指定 commit 并删除提交记录
+### 回退指定 commit 并删除提交记录
 
 步骤：
 
