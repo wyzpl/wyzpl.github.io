@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "rspress dev",
     "build": "rspress build",
-    "preview": "rspress preview"
+    "preview": "rspress preview",
+    "deploy": "rspress build && git add . && git commit -m 'deploy' && git push"
   },
   "dependencies": {
     "rspress": "^1.18.0",

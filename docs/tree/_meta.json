@@ -1,0 +1,10 @@
+[
+  "index",
+  {
+    "type": "dir",
+    "name": "dev",
+    "label": "开发笔记",
+    "collapsible": true,
+    "collapsed": false
+  }
+]

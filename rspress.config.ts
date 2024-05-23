@@ -4,10 +4,10 @@ import alignImage from "rspress-plugin-align-image";
 
 export default defineConfig({
   root: path.join(__dirname, "docs"),
-  title: "TREEPLANTING",
+  title: "植树 Blog",
   base: "/blog/",
   description: "朝如青丝暮成雪 人生得意须尽欢",
-  logoText: "TREEPLANTING",
+  logoText: "植树 Blog",
   icon: "/logo.png",
   logo: {
     light: "/logo.png",
