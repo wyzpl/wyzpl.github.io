@@ -1,7 +1,7 @@
 [
   {
     "text": "开发笔记",
-    "link": "/note/eg/0",
+    "link": "/note/",
     "activeMatch": "/note/"
   },
   {
@@ -11,8 +11,8 @@
   },
   {
     "text": "后端笔记",
-    "link": "/dev/nest/",
-    "activeMatch": "/dev/nest/"
+    "link": "/dev/",
+    "activeMatch": "/dev/"
   },
   {
     "text": "工具箱",
