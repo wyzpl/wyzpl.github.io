@@ -1,1 +1,62 @@
-# 链接数据库
+# 数据库使用
+
+import { PackageManagerTabs} from '@theme';
+
+:::tip
+
+本项目中使用方式均为 `Promise` 方式
+
+:::
+
+### 工具库
+
+[**MySQL2**](https://sidorares.github.io/node-mysql2/zh-CN/docs)  
+
+适用于Node.js的MySQL客户端，专注于性能优化。支持SQL预处理、非UTF-8编码支持、二进制文件编码支持、压缩和SSL等等。
+
+### 安装
+
+MySQL2 可以跨平台使用，毫无疑问可以安装在 Linux、Mac OS 或 Windows 上。
+
+<PackageManagerTabs command={{Javascript:"pnpm install --save mysql2",Typscript:"pnpm install --save mysql2\npnpm install --save-dev @types/node"}} />
+
+### 链接方式
+
+[**参考文档**](https://sidorares.github.io/node-mysql2/zh-CN/docs/examples/connections/create-pool)
+
+>  项目中使用配置进行链接数据库
+
+**通过 connectionUri 链接**
+
+`mysql://root:password@localhost:3306/test`
+
+**通过配置链接** [PoolOptions](https://sidorares.github.io/node-mysql2/zh-CN/docs/examples/connections/create-pool#pooloptions)
+
+```js
+{
+    host: 'localhost',
+    user: 'root',
+    database: 'test',
+    // port: 3306,
+    // password: '',
+  }
+```
+
+
+
+### 封装方法
+
+在 `lib` 目录下新增  `db.js`封装数据库链接方法，并在 `env` 或 `next.config.mjs`中的 `env` 添加数据库相关配置信息
+
+```js title="next.config.mjs"
+const nextConfig = {
+  env: {
+    MYSQL_HOST: process.env.MYSQL_HOST || "localhost",
+    MYSQL_PORT: process.env.MYSQL_PORT || "3306",
+    MYSQL_DATABASE: process.env.MYSQL_DATABASE || "test",
+    MYSQL_USER: process.env.MYSQL_USER || "root",
+    MYSQL_PASSWORD: process.env.MYSQL_PASSWORD || "****",
+  }
+};
+```
+
