@@ -2,6 +2,13 @@
   "index",
   {
     "type": "dir",
+    "name": "basic",
+    "label": "基础知识",
+    "collapsible": true,
+    "collapsed": false
+  },
+  {
+    "type": "dir",
     "name": "vue",
     "label": "Vue",
     "collapsible": true,

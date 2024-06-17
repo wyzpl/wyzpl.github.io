@@ -6,7 +6,7 @@ export default defineConfig({
   root: path.join(__dirname, "docs"),
   title: "植树 Blog",
   base: "/blog/",
-  description: "朝如青丝暮成雪 人生得意须尽欢",
+  description: "前端，技术，JavaScript，TypeScript，Node.js，Vue.js，React.js，Webpack，Nest.js，Next.js，Rspress",
   logoText: "植树 Blog",
   icon: "/logo.png",
   logo: {
