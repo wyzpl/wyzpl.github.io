@@ -4,10 +4,10 @@ import alignImage from "rspress-plugin-align-image";
 
 export default defineConfig({
   root: path.join(__dirname, "docs"),
-  title: "植树 Blog",
-  base: "/blog/",
+  title: "植树计划",
+  base: "/",
   description: "前端，技术，JavaScript，TypeScript，Node.js，Vue.js，React.js，Webpack，Nest.js，Next.js，Rspress",
-  logoText: "植树 Blog",
+  logoText: "植树计划",
   icon: "/logo.png",
   logo: {
     light: "/logo.png",
@@ -19,5 +19,8 @@ export default defineConfig({
   },
   themeConfig: {
     lastUpdated: true,
+    footer: {
+      message: "©2023-2024 Create By ☄️ 植树",
+    },
   },
 });

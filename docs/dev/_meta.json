@@ -2,15 +2,8 @@
   "index",
   {
     "type": "dir",
-    "name": "nest",
-    "label": "NestJS",
-    "collapsible": true,
-    "collapsed": false
-  },
-  {
-    "type": "dir",
-    "name": "next",
-    "label": "NextJS",
+    "name": "daily",
+    "label": "植树 Dev",
     "collapsible": true,
     "collapsed": false
   }
