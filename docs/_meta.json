@@ -1,8 +1,8 @@
 [
   {
     "text": "植树 Blog",
-    "link": "/blog/",
-    "activeMatch": "/blog/"
+    "link": "/home/",
+    "activeMatch": "/home/"
   },
   {
     "text": "开发笔记",
