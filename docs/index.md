@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: 开发笔记
-      link: /note/
+      link: /home/
     - theme: alt
       text: 工具箱
       link: /tools/0

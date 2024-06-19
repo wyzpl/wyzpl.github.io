@@ -12,13 +12,13 @@
     "name": "bug",
     "label": "踩坑记录",
     "collapsible": true,
-    "collapsed": true
+    "collapsed": false
   },
   {
     "type": "dir",
     "name": "os",
     "label": "环境配置",
     "collapsible": true,
-    "collapsed": true
+    "collapsed": false
   }
 ]

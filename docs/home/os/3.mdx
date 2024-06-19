@@ -1,15 +1,53 @@
 # 前端环境配置
 
-### Node
+## Nodejs
 
-**直接安装**
+Nodejs 是一个基于 Chrome V8 引擎的 JavaScript 运行环境，使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。
 
-**通过 Node 版本管理工具安装**
+Nodejs 的包管理器 [npm](https://www.npmjs.com/)，是全球最大的开源库生态系统。
 
-- pnpm
+### 安装
 
-- volta
+#### 官网安装
 
-- nvm
+- LTS 版本: [https://nodejs.org/en](https://nodejs.org/en)
 
-- n
+- 历史版本: [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+
+#### 通过 Node 版本管理工具安装
+
+> 在工作中通常会参与的多个项目中，每个项目可能使用的是不同的 Node.js 版本，建议通过 Node.js 版本管理工具安装
+
+1.  [volta](https://volta.sh/) 🌳
+
+    - 不仅可以控制 Nodejs 的版本，也可以控制 yarn、npm、pnpm 等工具的版本
+
+2.  [pnpm](https://www.pnpm.cn/) 🌳
+
+    - 本质上是一个包管理器，它借鉴了 npm 和 Yarn 的优点，并解决了它们的缺点
+
+    - 可以同时安装多个 Node.js 版本，并且不需要全局安装
+
+3.  n
+
+    > macos 我选这个
+
+    - 是一个 npm 包，只能在 macos 上使用
+
+4.  nvm / nvm for windows
+
+## 包管理工具
+
+### npm
+
+npm 是 Node.js 官方的包管理工具，它可以让 JavaScript 开发者在共享代码、复用代码以及更新共享的代码时更加方便。
+
+### yarn
+
+Yarn 是 Facebook、Google、Exponent 和 Tilde 联合推出了一个新的 JS 包管理工具。
+
+### pnpm
+
+pnpm 是一个快速、节省磁盘空间的包管理工具。pnpm 优化了依赖树，并避免了一些常见的问题。
+
+## 开发工具
