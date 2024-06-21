@@ -1,4 +1,6 @@
-# 前端环境配置
+# 前端开发环境配置
+
+import { Badge } from "@theme";
 
 ## Nodejs
 
@@ -6,48 +8,70 @@ Nodejs 是一个基于 Chrome V8 引擎的 JavaScript 运行环境，使用了�
 
 Nodejs 的包管理器 [npm](https://www.npmjs.com/)，是全球最大的开源库生态系统。
 
-### 安装
+### 安装方式
 
-#### 官网安装
+:::tip 建议
+在工作中每个项目可能使用的是不同的 Nodejs 版本，或者想尝鲜 Nodejs 新出 API
+
+所以建议通过版本管理工具安装 Nodejs
+:::
+
+**官网安装**
 
 - LTS 版本: [https://nodejs.org/en](https://nodejs.org/en)
 
 - 历史版本: [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
-#### 通过 Node 版本管理工具安装
+**版本管理工具安装**
 
-> 在工作中通常会参与的多个项目中，每个项目可能使用的是不同的 Node.js 版本，建议通过 Node.js 版本管理工具安装
+- [Volta](https://volta.sh/)「 不仅可以控制 Nodejs 的版本，也可以控制 yarn、npm、pnpm 等工具的版本 🌳 」
 
-1.  [volta](https://volta.sh/) 🌳
+- [pnpm](https://www.pnpm.cn/)「 本质上是一个包管理器，也可以同时安装多个 Nodejs 版本 🌳 」
 
-    - 不仅可以控制 Nodejs 的版本，也可以控制 yarn、npm、pnpm 等工具的版本
+- [n](https://www.npmjs.com/package/n) 「 是一个 npm 包，只支持 macos 上使用 <Badge text="macos 选它" type="info" /> 」
 
-2.  [pnpm](https://www.pnpm.cn/) 🌳
+- [nvm](https://github.com/nvm-sh/nvm) / [nvm-windows](https://github.com/coreybutler/nvm-windows)
 
-    - 本质上是一个包管理器，它借鉴了 npm 和 Yarn 的优点，并解决了它们的缺点
+### 包管理工具
 
-    - 可以同时安装多个 Node.js 版本，并且不需要全局安装
+- [npm](https://www.npmjs.com/)「 是全球最大的开源库生态系统，与 Nodejs 捆绑安装 」
 
-3.  n
+- [pnpm](https://www.pnpm.cn/)「 比 npm 速度快，更节省磁盘空间 🌳 」
 
-    > macos 我选这个
-
-    - 是一个 npm 包，只能在 macos 上使用
-
-4.  nvm / nvm for windows
-
-## 包管理工具
-
-### npm
-
-npm 是 Node.js 官方的包管理工具，它可以让 JavaScript 开发者在共享代码、复用代码以及更新共享的代码时更加方便。
-
-### yarn
-
-Yarn 是 Facebook、Google、Exponent 和 Tilde 联合推出了一个新的 JS 包管理工具。
-
-### pnpm
-
-pnpm 是一个快速、节省磁盘空间的包管理工具。pnpm 优化了依赖树，并避免了一些常见的问题。
+- [yarn](https://yarnpkg.com/)「 Facebook 开源的包管理器 」
 
 ## 开发工具
+
+### 编辑器
+
+- [VSCode](https://code.visualstudio.com/) 「 🌳 」
+
+- [WebStorm](https://www.jetbrains.com.cn/webstorm/) 「 💰 」
+
+- [HbuilderX](https://www.dcloud.io/hbuilderx.html)
+
+- [微信小程序开发工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
+
+### 代码管理
+
+- [Git](https://git-scm.com/)
+
+- [SVN](https://subversion.apache.org/packages.html)
+
+**图形工具**
+
+- [Sourcetree](https://www.sourcetreeapp.com/) 「 🌳 」
+
+- [GitHub Desktop](https://desktop.github.com/)
+
+- [Gitbutler](https://gitbutler.com/)
+
+- [TortoiseGit](https://tortoisegit.org/download/)
+
+### 接口调试
+
+- [Apifox](https://www.apifox.cn/) 「 中文、支持 Mock 数据 🌳 」
+
+- [Postman](https://www.postman.com/) 「 英文 」
+
+- [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) 「 VSCode 插件、需要学习入门 」
