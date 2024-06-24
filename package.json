@@ -11,6 +11,7 @@
   "dependencies": {
     "rspress": "^1.18.0",
     "rspress-plugin-align-image": "^0.3.0",
+    "rspress-plugin-google-analytics": "^0.3.0",
     "scss": "^0.2.4"
   },
   "devDependencies": {
