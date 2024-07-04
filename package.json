@@ -9,6 +9,7 @@
     "deploy": "rspress build && git add . && git commit -m 'deploy' && git push"
   },
   "dependencies": {
+    "@rspress/shared": "^1.25.1",
     "rspress": "^1.18.0",
     "rspress-plugin-align-image": "^0.3.0",
     "rspress-plugin-google-analytics": "^0.3.0",

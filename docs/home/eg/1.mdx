@@ -1,5 +1,9 @@
 # APP 如何打开应用通知权限
 
+:::warning 注意
+本文章使用 uniapp 开发，使用了`plus`。如果涉及多端，需进行条件编译
+:::
+
 ## 获取通知权限状态
 
 ```js
@@ -40,7 +44,6 @@ function getNotificationStatus() {
 Android 可以直接跳转通知设置页面。ios 需要跳转设置页面后在手动进入通知设置
 
 ```js
-}
 function openNotificationSetting() {
 	//弹窗按钮绑定方法
 	if (platform == 'ios') {

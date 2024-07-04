@@ -9,6 +9,13 @@
   },
   {
     "type": "dir",
+    "name": "daily",
+    "label": "每日一题",
+    "collapsible": true,
+    "collapsed": false
+  },
+  {
+    "type": "dir",
     "name": "vue",
     "label": "Vue",
     "collapsible": true,
