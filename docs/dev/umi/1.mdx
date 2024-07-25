@@ -1,0 +1,23 @@
+# 起步
+
+import { Badge } from "@theme";
+
+<Badge text="项目开发第一天" type="warning" />
+
+### 项目创建
+
+1. 使用[Umi Max](https://umijs.org/docs/max/introduce)创建项目
+
+2. 配置[UnoCSS](https://umijs.org/docs/guides/styling#%E4%BD%BF%E7%94%A8-unocss)并增加[预设](https://unocss.dev/presets/)
+
+### 遇到问题
+
+1. Umi Max 使用`layout:'mix'`后没有头部菜单
+
+   配置混合菜单时，需要将`ProLayout`组件的`layout`属性设置为`mix`，并设置属性`splitMenus: true`分离头部和侧边栏菜单
+
+2. 一直报错的信息为解决
+
+:::danger
+Warning: findDOMNode is deprecated and will be removed in the next major release. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node
+:::

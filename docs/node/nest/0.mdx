@@ -6,7 +6,7 @@
 
 Node.js（版本 >= 16）
 
-## 脚手架
+## 安装脚手架
 
 ```bash
 npm i -g @nestjs/cli
@@ -14,10 +14,20 @@ npm i -g @nestjs/cli
 
 ## 创建项目
 
+### 方式一
+
 使用  `Nest CLI`  构建的项目会创建一个初始的项目结构,并安装 node modules 和其他一些样板文件，然后创建一个  `src/`  目录，并增加几个核心文件。
 
 ```bash
 nest new project-name
+```
+
+### 方式二
+
+直接使用  `npx`  命令安装
+
+```bash
+npx @nestjs/cli new project-name
 ```
 
 ## 启动项目
@@ -30,4 +40,10 @@ npm run start
 
 在浏览器中打开  **[http://localhost:3000/](http://localhost:3000/)**
 
-## 常用命令
+## 更新脚手架
+
+更新脚手架确保创建的项目是最新版
+
+```bash
+npm update -g @nestjs/cli
+```
