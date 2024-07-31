@@ -1,1 +1,65 @@
-# 全都是知识点
+# vue-i18n 的使用
+
+在 Vue 模板中使用 i18n 都很熟练了，但是遇到一些文字信息是在 js 文件中，也需要进行翻译，直接上代码。
+
+在 locales 下创建`index.js`，负责导出国际化配置
+
+```js title="/locales/index.js"
+import { createI18n } from "vue-i18n";
+// 语言配置文件
+import en from "./en.json";
+import zh from "./zh-Cn.json";
+
+const messages = {
+  en,
+  "zh-CN": zh,
+};
+
+const i18n = createI18n({
+  legacy: false, // 设置为 false，启用 composition API 模式
+  messages,
+  locale: localStorage.getItem("lang") || "en", // 设置默认语言
+  silentTranslationWarn: true,
+  globalInjection: true, // 全局注入
+});
+
+export { i18n };
+```
+
+在 main.js 中引入
+
+```js title="main.js"
+// ...
+import { i18n } from "./locales";
+
+// app 为Vue实例
+app.use(i18n);
+```
+
+在 vue 中使用
+
+```html
+<template>
+  <div>
+    <h1>{{ $t("hello") }}</h1>
+  </div>
+</template>
+
+<script setup>
+  // 只能在setup中这么写
+  import { useI18n } from "vue-i18n";
+  const { t } = useI18n();
+
+  console.log(t("hello"));
+</script>
+```
+
+在 js 文件中使用
+
+```js
+// 引入
+import { i18n } from "../locales";
+
+// 调用
+console.log(i18n.global.t("hello"));
+```
