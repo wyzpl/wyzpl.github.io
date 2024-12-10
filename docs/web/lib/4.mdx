@@ -1,0 +1,32 @@
+# 浏览器控制台 Consloe.log 的高级样式
+
+要为浏览器控制台的 console.log 输出样式化，可以使用 CSS 样式或者使用特殊的命令行工具。
+
+### 使用 CSS 样式
+
+可以通过在 console.log()输出的字符串中添加 CSS 样式来实现样式化效果。下面是一个示例代码：
+
+```js
+console.log("%cHello World!", "color: blue; font-size: 20px; background-color: yellow;");
+```
+
+在上面的代码中，我们通过%c 占位符来为输出的字符串添加样式。在%c 后面的引号内，可以添加任意的 CSS 样式。上面的示例中，我们为字符串添加了蓝色的文字颜色、20px 的字体大小和黄色的背景色。
+
+### 使用特殊的命令行工具
+
+有一些第三方的工具可以帮助我们在控制台中添加更高级的样式化效果，如 [chalk.js](https://github.com/chalk/chalk) 和 [ansi-colors](https://github.com/doowb/ansi-colors) 等。这些工具提供了更多的颜色和样式选项，使得控制台输出更加丰富。以下是一个使用 chalk.js 的示例代码：
+
+```js
+const chalk = require("chalk");
+console.log(chalk.blue("Hello World!"));
+```
+
+在上面的代码中，我们首先使用`require()`函数将 chalk.js 模块引入。然后，我们可以使用 chalk.blue()方法为输出的字符串添加蓝色样式。
+
+**注意：在浏览器环境中使用这些命令行工具需要使用构建工具将代码打包后再在浏览器中运行。**
+
+通过上述方法，你可以为浏览器控制台的 console.log 输出添加高级的样式化效果。
+
+### 效果预览
+
+![](../../public/tools/0-1.png)

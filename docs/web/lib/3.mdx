@@ -1,0 +1,75 @@
+# Label Studio 使用指南
+
+## Label Studio 简介
+
+Label Studio 是一个开源的、基于 Web 的数据标注工具，它支持多种数据类型，如文本、图像、音频和视频等。Label Studio 提供了一个直观的用户界面，使得标注人员可以轻松地进行数据标注。
+
+有 Python SDK、ML 后端支持、前端界面，在下面实例中只使用了前端标注页面的，在此进行记录。
+
+[Label Studio 的官方文档](https://labelstud.io/guide/frontend_reference)
+
+[Label Studio V1.13.1 的 Github](https://github.com/HumanSignal/label-studio/tree/ls-release/1.13.1)
+
+### 使用背景
+
+在公司自研项目中加入开源标注工具。
+
+**注：**官方文档可能和当前版本有所不通，部分功能可能不支持。
+
+### 使用方法
+
+1. 克隆 Label Studio 源码
+
+2. 前端标注工具路径在`/web/editor`, 命令需要在`/web` 目录下运行，运行`yarn build`完成打包
+
+3. 把`dist/libs/editor` 引入到项目中`/public` 下*（导致项目体积过大）*
+
+4. 在 index.html 中引入`<script type="module" src="/label-studio/editor/main.js"></script>`
+
+5. 在页面引入`css/public/label-studio/editor/main.css`
+
+### 数据回显
+
+```javascript
+annotations: [
+  {
+    model_version: "1",
+    score: "0.5",
+    result: [
+      {
+        id: "1",
+        type: "rectanglelabels",
+        from_name: "arr", // 需要和标签的name一致
+        to_name: "txt", // 需要和标签的to-name一致
+        original_width: 1000,
+        original_height: 697,
+        image_rotation: 0,
+        value: {
+          rotation: 0,
+          x: 51.98,
+          y: 12.82,
+          width: 12.52,
+          height: 44.91,
+          rectanglelabels: ["黑金隼"],
+        },
+      },
+    ],
+  },
+];
+```
+
+### 遇到的问题
+
+#### 官网文档和示例提供的文档表示标注数据为百分比，但根据实际测试，标注数据为像素值，实际取值得到的是像素值
+
+    label studio 会在`window`上挂载一个全局对象，可以通过`window.Htx`来获取标注数据
+
+```javascript
+const htx = window.Htx;
+
+if (htx) {
+  const annotation = htx.annotationStore.selected;
+  sourceData = annotation.serializeAnnotation();
+}
+```
+

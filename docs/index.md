@@ -7,8 +7,8 @@ hero:
   tagline: 记录开发过程中遇到的问题及解决方案
   actions:
     - theme: brand
-      text: 开发笔记
-      link: /home/
+      text: 前端笔记
+      link: /web/
     - theme: alt
       text: 工具箱
       link: /tools/0

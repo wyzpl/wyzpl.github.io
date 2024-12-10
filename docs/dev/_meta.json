@@ -6,12 +6,5 @@
     "label": "Umi Admin",
     "collapsible": true,
     "collapsed": false
-  },
-  {
-    "type": "dir",
-    "name": "daily",
-    "label": "植树 Dev",
-    "collapsible": true,
-    "collapsed": false
   }
 ]

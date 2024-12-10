@@ -1,0 +1,62 @@
+# Swiper 使用指南
+
+:::tip
+本文章主要介绍 Swiper Element 的基本使用和遇到的坑点，想要了解更多请查看 [Swiper 官方文档](https://swiperjs.com/element#installation)
+
+项目是使用 Vue3 + Nuxt 进行开发。别问我为什么不用 Swiper Vue 组件开发，问我就是也不知道
+
+Swiper 版本：V 11.1.9
+:::
+
+### 安装
+
+具体安装步骤参考[Swiper 官方文档](https://swiperjs.com/element#installation)
+
+### 常见问题
+
+#### 自定义元素报警告
+
+主要使用`compilerOptions - isCustomElement` 解决
+
+#### 1. 获取 Swiper 实例
+
+在 **Swiper-Element** 中 **监听事件** 和 **调用方法** 都需要使用到 `swiper` 实例
+
+- 使用 `ref` 获取 `swiper-container` 元素，定义为 `swiperElRef`
+
+- 实例为：`swiperElRef.value.swiper`
+
+#### 2. 监听方法
+
+在 Vue 中使用，使用 `on` 监听事件，被监听事件名改为驼峰式
+
+```js title="文档内容"
+swiperEl.addEventListener("swiperslidechange", (event) => {
+  console.log("slide changed");
+});
+```
+
+```js title="实际使用"
+// vue中注意获取实例
+swiperElRef.value.swiper.on("swiperSlideChange", (event) => {
+  console.log("slide changed");
+});
+```
+
+#### 3. 自动播放
+
+在 `swiper` 实例中设置 `autoplay` 为 `true` 即可实现自动播放
+
+即使没设置 `autoplay`，但设置了 `autoplay` 其他属性，也会触发自动播放
+
+获取当前自动播放的剩余时间，监听事件 `autoplaytimeleft` 可以获取剩余时间和剩余百分比
+
+```js
+// vue 中注意事件名为驼峰式
+swiperRef.value.swiper.on("autoplayTimeLeft", (swiper, timeLeft, percentage) => {
+  console.log("🏸 ~ timeLeft:", timeLeft);
+  console.log("🏸 ~ percentage:", percentage);
+});
+```
+
+#### 4.

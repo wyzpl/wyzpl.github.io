@@ -1,3 +1,11 @@
 .rspress-sidebar-group:before {
   display: none;
 }
+
+:root {
+  --rp-c-brand: #a855f7;
+  --rp-c-brand-dark: #7e22ce;
+  --rp-c-brand-darker: #6b21a8;
+  --rp-c-brand-light: #6b21a8;
+  --rp-c-brand-lighter: #7e22ce;
+}

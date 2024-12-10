@@ -9,29 +9,29 @@
   },
   {
     "type": "dir",
+    "name": "dev",
+    "label": "开发案例",
+    "collapsible": true,
+    "collapsed": false
+  },
+  {
+    "type": "dir",
     "name": "daily",
-    "label": "每日一题",
+    "label": "刷题记录",
     "collapsible": true,
     "collapsed": false
   },
   {
     "type": "dir",
-    "name": "vue",
-    "label": "Vue",
+    "name": "lib",
+    "label": "工具库使用方式",
     "collapsible": true,
     "collapsed": false
   },
   {
     "type": "dir",
-    "name": "react",
-    "label": "React",
-    "collapsible": true,
-    "collapsed": false
-  },
-  {
-    "type": "dir",
-    "name": "css",
-    "label": "CSS",
+    "name": "bug",
+    "label": "踩坑记录",
     "collapsible": true,
     "collapsed": false
   }

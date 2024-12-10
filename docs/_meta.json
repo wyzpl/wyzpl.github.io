@@ -1,27 +1,24 @@
 [
   {
-    "text": "植树 Blog",
-    "link": "/home/",
-    "activeMatch": "/home/"
+    "text": "前端笔记",
+    "link": "/web/",
+    "activeMatch": "/web/"
   },
   {
-    "text": "开发笔记",
-    "items": [
-      {
-        "text": "前端笔记",
-        "link": "/web/"
-      },
-      {
-        "text": "后端笔记",
-        "link": "/node/"
-      },
-      {
-        "text": "植树 Dev",
-        "link": "/dev/"
-      }
-    ]
+    "text": "后端笔记",
+    "link": "/node/",
+    "activeMatch": "/node/"
   },
-
+  {
+    "text": "植树 Dev",
+    "link": "/dev/",
+    "activeMatch": "/dev/"
+  },
+  {
+    "text": "环境配置",
+    "link": "/os/0",
+    "activeMatch": "/os/"
+  },
   {
     "text": "实用工具",
     "link": "/tools/0",

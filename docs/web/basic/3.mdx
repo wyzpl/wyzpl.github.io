@@ -1,0 +1,73 @@
+# vue3 项目配置自动引用
+
+import { SourceCode } from "@theme";
+
+自动导入分为自动导入 api 和自动导入组件，原理都是通过 vite 插件来实现的。
+
+### 自动导入组件
+
+封装过后的组件可以直接在template中使用，组件自动引入且注册。
+
+**安装**
+
+<SourceCode href="https://github.com/unplugin/unplugin-vue-components" />
+
+```bash
+npm i unplugin-vue-components -D
+```
+
+**自动导入 ElementPlus(可选)**
+
+```bash
+npm i unplugin-element-plus -D
+```
+
+#### 在 Vite 中配置
+
+```javascript
+// vite.config.ts
+import Components from "unplugin-vue-components/vite";
+
+export default defineConfig({
+  plugins: [
+    Components({
+      dirs: ["src/components", "src/layouts/components"], // 指定自动导入组件的路径
+      extensions: ["vue"], // 组件的有效文件扩展名
+      deep: true, // 搜索子目录
+      dts: path.resolve("types", "components.d.ts"), // 指定自动导入函数TS类型声明文件路径
+      resolvers: [ElementPlusResolver()], // ElemenPlus 自动导入
+    }),
+  ],
+});
+```
+
+### 自动导入 api
+
+像`ref,reactive,useRoute,useRouter`等api直接使用，无需手动引入。
+
+**安装**
+
+<SourceCode href="https://github.com/unplugin/unplugin-auto-import#readme" />
+
+```bash
+npm i -D unplugin-auto-import
+```
+
+#### 在 Vite 中配置
+
+```js
+// vite.config.ts
+import AutoImport from "unplugin-auto-import/vite";
+
+export default defineConfig({
+  plugins: [
+    AutoImport({
+      imports: ["vue", "vue-router", "vue-i18n", "pinia"], // 需要自动导入API的库
+      vueTemplate: true,
+      dirs: ["./src/utils/**", "./src/api/**", "./src/store/**"], // 需要自动导入的目录
+      dts: path.resolve("types", "auto-imports.d.ts"), // 指定自动导入函数TS类型声明文件路径
+      resolvers: [ElementPlusResolver()],
+    }),
+  ],
+});
+```
