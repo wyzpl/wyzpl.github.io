@@ -23,7 +23,7 @@ IntelliJ IDEA 或者 WebStorm
 
 **缺点：**
 
-- 付费
+- 付费（webstorm非商用免费）
 
 ## 数据库
 
