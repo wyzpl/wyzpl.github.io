@@ -16,6 +16,13 @@
   },
   {
     "type": "dir",
+    "name": "uniapp",
+    "label": "uni-app开发",
+    "collapsible": true,
+    "collapsed": false
+  },
+  {
+    "type": "dir",
     "name": "daily",
     "label": "刷题记录",
     "collapsible": true,
