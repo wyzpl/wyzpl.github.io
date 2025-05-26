@@ -1,0 +1,53 @@
+# 跳转第三方应用
+
+[文档](https://www.html5plus.org/doc/zh_cn/runtime.html)
+
+主要是用于跳转第三方应用，比如微信、支付宝、地图等
+
+ios盒android跳转地址不一定一致，所以需要注意分别处理
+
+## plus.runtime.isApplicationExist
+
+用来检测某个应用是否已经安装
+
+```js
+plus.runtime.isApplicationExist({ pname: 'com.baidu.BaiduMap', action: 'baidumap://' })
+```
+
+## plus.runtime.openURL
+
+用来打开某个应用
+
+```js
+plus.runtime.openURL('baidumap://')
+```
+## plus.runtime.launchApplication
+
+用来打开某个应用
+
+```js
+plus.runtime.launchApplication( appInf, errorCB )
+```
+
+## 异常处理
+
+### ios 部分机型无法跳转app
+
+**方案一**
+
+使用`encodeURI`对url进行编码
+
+```js
+plus.runtime.openURL(encodeURI('baidumap://'))
+```
+
+**方案二**
+
+在调用api的失败回掉函数中进行处理，比如跳转app商店地址或者跳转指定的H5页
+ 
+```js
+plus.runtime.openURL('baidumap://', function (e) {
+    // 跳转H5页
+    plus.runtime.openURL('https://pr.map.qq.com/j/tmap/download?key=LPPBZ-N3VCH-5PIDH-WHYYI-VEGWV-CPBUD')
+})
+```
