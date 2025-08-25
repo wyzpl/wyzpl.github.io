@@ -1,0 +1,68 @@
+# UniApp Android本地打包配置
+
+:::tip
+本文章内容配置基于Win11系统， 证书是dcloud云端证书
+
+:::
+
+## 参考链接
+
+[离线打包环境配置](https://nativesupport.dcloud.net.cn/AppDocs/usesdk/android.html#%E9%85%8D%E7%BD%AE%E5%B7%A5%E7%A8%8B)
+
+[离线打包常见问题](https://nativesupport.dcloud.net.cn/AppDocs/usesdk/appkey.html)
+
+[打包自定义基座](https://ask.dcloud.net.cn/article/35482)
+
+[打包发行](https://nativesupport.dcloud.net.cn/AppDocs/package/android.html)
+
+
+### 前期准备
+
+- 配置开发环境 [参考官网](https://nativesupport.dcloud.net.cn/AppDocs/usesdk/android.html#appname) 下载所需工具
+
+- 申请 [Appkey](https://nativesupport.dcloud.net.cn/AppDocs/usesdk/appkey.html) 
+
+### 申请 Appkey
+
+- 登录[开发者中心](https://dev.dcloud.net.cn/pages/app/list)，在我的应用里找到对应的 App 后生成 **Android云端证书**
+
+- 在 **证书详情** 里找到 **证书别名**、**证书密码**、**证书指纹（MD5、SHA1、SHA256）**，并保存备份
+
+- 下载证书 备用
+
+- 在 **各平台信息** 下新增平台信息，选择 Android。然后填写相关信息（上面保存的证书指纹），并保存
+
+- 在 **各平台信息** 列表创建 **离线Appkey**，并保存
+
+
+### 配置流程
+
+- 下载 [SDK](https://nativesupport.dcloud.net.cn/AppDocs/download/android.html) 后直接使用 Android Studio 导入HBuilder-Integrate-AS工程
+
+- 修改 `src/main/res/values/strings.xml`的 app_name 为应用名字 ( manifeat.json - 应用名称 )
+
+- 修改 `src/main/assets/data/dcloud_control.xml`的 appid 为自己项目的 manifeat.json 的 AppId
+
+- 修改 `AndroidManifest.xml` 文件下的 AppKey 为自己项目的 Appkey
+
+- 修改 `simpleDemo/build.gradle`
+
+```gradle
+    android{
+        // ...
+        // 配置证书信息（使用上面生成的云端证书或者替换自己生成的证书）
+         signingConfigs {
+            config {
+                keyAlias '__uni__09c5ff7'  //  证书别名
+                keyPassword 'UX7ixYqn'     //  证书密码
+                storeFile file('test.keystore')  //  证书文件 （直接使用云端证书）
+                storePassword 'UX7ixYqn'  //  证书文件密码
+                v1SigningEnabled true
+                v2SigningEnabled true
+            }
+        }
+        //...
+    }
+```
+
+
